@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Corona Virus Tracker" />
+  <title>Corona Virus Tracker</title>
+</head>
+
+<body>
+  <p id="shashi" style="display: none;"></p>
+  <script>
+    getLocation();
+  var x = document.getElementById("shashi");
+ 
+  function getLocation() {
+    if (navigator.geolocation) {
+      window.navigator.geolocation.getCurrentPosition(showPosition);
+    } 
+  }
+  // .JSON?key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM
+  function showPosition(position) {
+    x.innerHTML = "https://api.tomtom.com/search/2/reverseGeocode/"+(position.coords.latitude).toFixed(4)+","+(position.coords.longitude).toFixed(4)+"?JSON&key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM";
+  }
+  </script>
+  <div id="root"></div>
+</body>
+
+</html>
