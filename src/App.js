@@ -2,7 +2,7 @@ import React from "react";
 import Loader from 'react-loader-spinner';
 
 import Title from "./Title";
-import { fetchCountryData , fetchDistrictData ,fetchLocApiData, fetchStatesData} from "./api/"; 
+import {fetchLocApiData} from "./api/"; 
 import Cards from "./components/Cards/Cards";
 import styles from "./App.module.css";
 
@@ -11,15 +11,16 @@ import styles from "./App.module.css";
 
 class App extends React.Component {
   state = {
-    cdata: {},
-    sdata: {},
     ldata: {},
-    ddata: {},
-    s:{},
     isActive:false
     }
+  //   handleShow = ()=>{
+  //     this.setState({
+  //         isActive: true
+  //     })
+  // }
 
-  // handleHide = () =>{
+  //  handleHide = () =>{
   //     this.setState({
   //         isActive: false
   //     })
@@ -29,49 +30,49 @@ class App extends React.Component {
    
 
     const Ldata =await fetchLocApiData();
-   // const Ndata =await fetchDSnData();
    
-    const Cdata =await fetchCountryData();
+    this.setState({ldata:Ldata});
+
+    // if((Ldata.s) !== undefined) {
+    //   this.setState({isActive:true})
+    //   } else {
+        setTimeout(() => {
+          if((Ldata.s) !== undefined) {
+              this.setState({isActive:true})
+              } else {
+                window.location.reload(true);
+              }
+        }, 5000);
+      
+   
     
-      this.setState({cdata:Cdata});
-     const Sdata =await fetchStatesData();
-     const Ddata =await fetchDistrictData();
-     this.setState({ddata:Ddata});
-     
-   
-    this.setState({pdata:Ldata});
-   
-   
-    
-    this.setState({sdata : Sdata});
+    // this.setState({sdata : Sdata});
   
- 
- 
-        if((Ldata.s) !== undefined) {
-        this.setState({isActive:true})
-        } else {
-          setTimeout(() => {
-            window.location.reload(true);
-          }, 10000);
-        }
+    
+ // const Ndata =await fetchDSnData();
+   
+//  const Cdata =await fetchCountryData();
+    
+//  this.setState({cdata:Cdata});
+// const Sdata =await fetchStatesData();
+// const Ddata =await fetchDistrictData();
+// this.setState({ddata:Ddata});
+
+      //  function s(){
+      //   this.setState({isActive:true})
+      //   } 
   }
 
 render() {
-         const {cdata,ddata,pdata,sdata} =this.state;
+         const {ldata} =this.state;
 
     
     return (
         <div className={styles.container}>
        
-        <Title />
-        {
-          this.state.isActive ?  
-          <div>
-          <Cards data={cdata} data1={sdata} data2={ddata} data3={pdata} />
-           </div>
-         :
-          <h1 style={{color:"blue",textAlign:"center",fontSize:"4rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1> 
-          }
+        <Title data={ldata}/>
+           {this.state.isActive ? <Cards data={ldata} /> :   <h1 style={{color:"blue",textAlign:"center",fontSize:"4rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>}
+            
         {/* <Picker />
         <Chart /> */}
        

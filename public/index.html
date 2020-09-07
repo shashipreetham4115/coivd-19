@@ -21,6 +21,7 @@
       window.navigator.geolocation.getCurrentPosition(showPosition);
     } 
   }
+  // <h1 style={{color:"blue",textAlign:"center",fontSize:"4rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>
   // .JSON?key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM
   function showPosition(position) {
     x.innerHTML = "https://api.tomtom.com/search/2/reverseGeocode/"+(position.coords.latitude).toFixed(4)+","+(position.coords.longitude).toFixed(4)+"?JSON&key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM";

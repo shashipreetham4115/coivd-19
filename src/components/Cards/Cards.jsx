@@ -6,9 +6,9 @@ import Slider from 'infinite-react-carousel';
 import Iframe from 'react-iframe';
 
 
-const Cards = ({data,data1,data2,data3}) => {
+const Cards = ({data}) => {
   
-  
+  console.log(data);
     const settings ={
     arrows:false,
     dots:false,
@@ -39,15 +39,15 @@ const Cards = ({data,data1,data2,data3}) => {
              </CardContent>
          </Grid>
              <CardContent className={styles.infected}>
-                 <Typography variant="h6">Worldwide:<CountUp start={0} end={data.confrimed} duration={2} separator=","></CountUp></Typography>
-                 <Typography variant="h6">{data3.s}:<CountUp start={0} end={data1.s.confirmed} duration={2} separator=","></CountUp></Typography>
-                 <Typography variant="h6">{data3.d}:<CountUp start={0} end={data2.confirmed} duration={2} separator=","></CountUp></Typography>
+                 <Typography variant="h6">{data.c}:<CountUp start={0} end={data.cdata.confirmed} duration={2} separator=","></CountUp></Typography>
+                 <Typography variant="h6">{data.s}:<CountUp start={0} end={data.sdata.confirmed} duration={2} separator=","></CountUp></Typography>
+                 <Typography variant="h6">{data.d}:<CountUp start={0} end={data.ddata.confirmed} duration={2} separator=","></CountUp></Typography>
                  {/* <Typography color="textSecondary" gutterBottom>last updated</Typography> */}
              </CardContent>
         
          <Grid item component={Card}>
              <CardContent className={styles.content}>
-                 <Typography color="textSecondary" gutterBottom>{new Date(data1.l).toDateString()}</Typography>
+                 <Typography color="textSecondary" gutterBottom>{new Date(data.lastUpdate).toDateString()}</Typography>
              </CardContent>
              </Grid>    
          </Grid>
@@ -64,15 +64,15 @@ const Cards = ({data,data1,data2,data3}) => {
              </CardContent>
          </Grid>
              <CardContent  className={styles.recovered}>
-                 <Typography variant="h6">Worldwide:<CountUp start={0} end={data.recovered} duration={2} separator=","></CountUp></Typography>
-                 <Typography variant="h6">{data3.s}:<CountUp start={0} end={data1.s.recovered} duration={2} separator=","></CountUp></Typography>
-                 <Typography variant="h6">{data3.d}:<CountUp start={0} end={data2.recovered} duration={2} separator=","></CountUp></Typography>            
+                 <Typography variant="h6">{data.c}:<CountUp start={0} end={data.cdata.recovered} duration={2} separator=","></CountUp></Typography>
+                 <Typography variant="h6">{data.s}:<CountUp start={0} end={data.sdata.recovered} duration={2} separator=","></CountUp></Typography>
+                 <Typography variant="h6">{data.d}:<CountUp start={0} end={data.ddata.recovered} duration={2} separator=","></CountUp></Typography>            
                  {/* <Typography color="textSecondary" gutterBottom>last updated</Typography> */}
                   </CardContent>
         
          <Grid item component={Card}>
              <CardContent className={styles.content1}>
-                 <Typography color="textSecondary" gutterBottom>{new Date(data1.l).toDateString()}</Typography>
+                 <Typography color="textSecondary" gutterBottom>{new Date(data.lastUpdate).toDateString()}</Typography>
              </CardContent>
              </Grid>    
          </Grid>
@@ -87,15 +87,15 @@ const Cards = ({data,data1,data2,data3}) => {
              </CardContent>
          </Grid>
              <CardContent  className={styles.deaths}>
-                 <Typography variant="h6">Worldwide:<CountUp start={0} end={data.deaths} duration={2} separator=","></CountUp></Typography>
-                 <Typography variant="h6">{data3.s}:<CountUp start={0} end={data1.s.deceased} duration={2} separator=","></CountUp></Typography>
-                 <Typography variant="h6">{data3.d}:<CountUp start={0} end={data2.deceased} duration={2} separator=","></CountUp></Typography>
+                 <Typography variant="h6">{data.c}:<CountUp start={0} end={data.cdata.deaths} duration={2} separator=","></CountUp></Typography>
+                 <Typography variant="h6">{data.s}:<CountUp start={0} end={data.sdata.deceased} duration={2} separator=","></CountUp></Typography>
+                 <Typography variant="h6">{data.d}:<CountUp start={0} end={data.ddata.deceased} duration={2} separator=","></CountUp></Typography>
                  {/* <Typography color="textSecondary" gutterBottom>last updated</Typography> */}
                  </CardContent>
          
          <Grid item component={Card}>
              <CardContent className={styles.content2}>
-                 <Typography color="textSecondary" gutterBottom>{new Date(data1.l).toDateString()}</Typography>
+                 <Typography color="textSecondary" gutterBottom>{new Date(data.lastUpdate).toDateString()}</Typography>
              </CardContent>
              </Grid>    
          </Grid>
