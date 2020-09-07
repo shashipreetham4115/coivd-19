@@ -6,7 +6,7 @@ import styles from './Card.module.css';
 
 const CardComponent = ({ contentHead,contentBody, cardTitle, cData, sData, dData, country,state,district,lastUpdate }) => (
     <div>
-    <Grid container spacing={8}  justify="center">
+    <Grid container spacing={0}  justify="center">
     <Grid item component={Card} className={styles.main}>
     <Grid item component={Card}>
         <CardContent className={contentHead}>
