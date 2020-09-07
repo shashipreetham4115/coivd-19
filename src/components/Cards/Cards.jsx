@@ -17,9 +17,9 @@ const Cards = ({data}) => {
      
      <div>
      <div className={styles.container}>
-     <Grid container spacing={0} justify="center">
+     <Grid container spacing={7} justify="center">
          <Grid item component={Card} className={styles.main1}>
-         <Grid item component={Card} container spacing={8} justify="center">
+         <Grid item component={Card} container spacing={7} justify="center">
              <CardContent className={styles.content4}>
              <h1 className={styles.title}>STATS</h1>
              </CardContent>
@@ -67,9 +67,9 @@ const Cards = ({data}) => {
          </CardContent>
         
         
-        <Grid item component={Card} container spacing={8} justify="center">
+        <Grid item component={Card} container spacing={7} justify="center">
              <CardContent className={styles.content4}>
-             <h1 className={styles.title}>suggestions and measures</h1>
+             <h1 className={styles.title}>In INDIA</h1>
              </CardContent>
          </Grid>
          </Grid>
