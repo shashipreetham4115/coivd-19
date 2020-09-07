@@ -5,10 +5,7 @@
     align-items: center;
     justify-content: center;
 } 
-.main {
-    /* border:20px solid rgba(0, 0, 0, 0.74); */
-   border-radius: 25% !important;
-}
+
 .main1 {
     /* border:20px solid rgba(0, 0, 0, 0.74); */
    border-radius: 10% !important;

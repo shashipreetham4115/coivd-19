@@ -6,9 +6,6 @@ import {fetchLocApiData} from "./api/";
 import Cards from "./components/Cards/Cards";
 import styles from "./App.module.css";
 
-
-
-
 class App extends React.Component {
   state = {
     ldata: {},
@@ -71,6 +68,7 @@ render() {
         <div className={styles.container}>
        
         <Title data={ldata}/>
+           
            {this.state.isActive ? <Cards data={ldata} /> :   <h1 style={{color:"blue",textAlign:"center",fontSize:"4rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>}
             
         {/* <Picker />
