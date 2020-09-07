@@ -69,7 +69,7 @@ render() {
        
         <Title data={ldata}/>
            
-           {this.state.isActive ? <Cards data={ldata} /> :   <h1 style={{color:"blue",textAlign:"center",fontSize:"4rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>}
+           {this.state.isActive ? <Cards data={ldata} /> :   <h1 style={{color:"blue",textAlign:"center",fontSize:"2.5rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>}
             
         {/* <Picker />
         <Chart /> */}

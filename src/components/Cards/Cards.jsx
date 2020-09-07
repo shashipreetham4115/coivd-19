@@ -17,7 +17,7 @@ const Cards = ({data}) => {
      
      <div>
      <div className={styles.container}>
-     <Grid container spacing={9} justify="center">
+     <Grid container spacing={0} justify="center">
          <Grid item component={Card} className={styles.main1}>
          <Grid item component={Card}>
              <CardContent className={styles.content4}>
