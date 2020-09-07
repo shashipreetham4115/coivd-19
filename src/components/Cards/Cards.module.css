@@ -11,9 +11,9 @@
    border-radius: 10% !important;
 }
 .title {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Abril Fatface', sans-serif;
     color: rgb(4, 48, 48);
-    font-size: 150%;
+    font-size: 200%;
     text-align: center;
     text-shadow: 1px 1px rgb(255, 0, 0);
 }

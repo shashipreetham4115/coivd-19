@@ -12,7 +12,7 @@
 }  */
 
 .title {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Abril Fatface', sans-serif;
     color: rgb(4, 48, 48);
     font-size: 340%;
     text-align: center;
@@ -25,9 +25,9 @@
 }
 @media screen and (max-width: 721px) {
     .title {
-        font-family: 'Abril Fatface', cursive;
+        font-family: 'Abril Fatface', sans-serif;
         color: rgb(1, 17, 17);
-        font-size: 300%;
+        font-size: 260%;
         text-align: center;
         text-shadow: 2px 2px rgb(221, 22, 22);
     }
