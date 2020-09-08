@@ -21,7 +21,7 @@ this.setState({ldata:Ldata});
            }  else {
                window.location.reload(true);
               }
-        }, 10000);
+        }, 6000);
   }
   
 render() {
