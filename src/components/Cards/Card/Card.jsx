@@ -18,7 +18,6 @@ const CardComponent = ({ contentHead,contentBody, cardTitle, cData, sData, dData
             <Typography variant="h6">{country}&nbsp;:&nbsp;<CountUp start={0} end={cData} duration={2} separator=","></CountUp></Typography>
             <Typography variant="h6">{state}&nbsp;:&nbsp;<CountUp start={0} end={sData} duration={2} separator=","></CountUp></Typography>
             <Typography variant="h6">{district}&nbsp;:&nbsp;<CountUp start={0} end={dData} duration={2} separator=","></CountUp></Typography>
-            {/* <Typography color="textSecondary" gutterBottom>last updated</Typography> */}
         </CardContent>
    
     <Grid item component={Card}>

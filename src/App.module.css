@@ -1,16 +1,4 @@
 
-/* @media screen and (max-width: 480px) {
-    body {
-        background: url(./covid.jpg) ;
-        background-size:cover;
-    }
-  } */
-/* .container {
-    display:flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-}  */
-
 .title {
     font-family: 'Abril Fatface', serif;
     color: rgb(4, 48, 48);

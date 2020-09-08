@@ -8,7 +8,6 @@
 } 
 
 .main1 {
-    /* border:20px solid rgba(0, 0, 0, 0.74); */
    border-radius: 10% !important;
    width : 30%;
    height: auto;
@@ -16,7 +15,7 @@
 
 @media screen and (max-width: 500px) {
     .main1 {
-        /* border:20px solid rgba(0, 0, 0, 0.74); */
+
        border-radius: 10% !important;
        width : 90%;
        height: auto;
@@ -25,7 +24,7 @@
 }
 @media all and (min-width: 500px) and (max-width: 1000px) {
     .main1 {
-        /* border:20px solid rgba(0, 0, 0, 0.74); */
+
        border-radius: 10% !important;
        width : 50%;
        height: auto;
@@ -40,9 +39,6 @@
     text-align: center;
     text-shadow: 1px 1px rgb(255, 0, 0);
 }
-/* .card {
-    margin:auto 20px;
-} */
 .content {
     color:rgb(67, 96, 177);
     background-color: rgba(3, 233, 250, 0.575);

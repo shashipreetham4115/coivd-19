@@ -11,77 +11,37 @@ class App extends React.Component {
     ldata: {},
     isActive:false
     }
-  //   handleShow = ()=>{
-  //     this.setState({
-  //         isActive: true
-  //     })
-  // }
-
-  //  handleHide = () =>{
-  //     this.setState({
-  //         isActive: false
-  //     })
-  // }
-  
   async componentDidMount() {
-   
-
-    const Ldata =await fetchLocApiData();
-   
-    this.setState({ldata:Ldata});
-
-    // if((Ldata.s) !== undefined) {
-    //   this.setState({isActive:true})
-    //   } else {
+ const Ldata =await fetchLocApiData();
+this.setState({ldata:Ldata});
         setTimeout(() => {
           if((Ldata.s) !== undefined) {
-              this.setState({isActive:true})
-              } else {
-                window.location.reload(true);
+              this.setState({isActive:true});
+             
+           }  else {
+               window.location.reload(true);
               }
-        }, 5000);
-      
-   
-    
-    // this.setState({sdata : Sdata});
-  
-    
- // const Ndata =await fetchDSnData();
-   
-//  const Cdata =await fetchCountryData();
-    
-//  this.setState({cdata:Cdata});
-// const Sdata =await fetchStatesData();
-// const Ddata =await fetchDistrictData();
-// this.setState({ddata:Ddata});
-
-      //  function s(){
-      //   this.setState({isActive:true})
-      //   } 
+        }, 10000);
   }
-
+  
 render() {
          const {ldata} =this.state;
 
-    
     return (
-        <div className={styles.container}>
+      <div className={styles.container}>
+      <Title/>     
+      {this.state.isActive ? <Cards data={ldata} />: <h1 style={{color:"blue",textAlign:"center",fontSize:"2.5rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>
+        }
+       </div>
        
-        <Title data={ldata}/>
-           
-           {this.state.isActive ? <Cards data={ldata} /> :   <h1 style={{color:"blue",textAlign:"center",fontSize:"2.5rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>}
-            
-        {/* <Picker />
-        <Chart /> */}
-       
-        </div>
     );
+  
       
 }
 
-
  
 }
+
 
 export default App;
 
