@@ -5,9 +5,6 @@ import Slider from 'infinite-react-carousel';
 import CardComponent from './Card/Card';
 
 const Cards = ({data}) => {
-  
-   
-  console.log(data);
     const settings ={
     arrows:false,
     dots:false,

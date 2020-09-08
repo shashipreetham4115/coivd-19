@@ -13,6 +13,7 @@
 <body>
   <p id="shashi" style="display: none;"></p>
   <script>
+    window.onresize = function(){window.location.reload(true)}
     getLocation();
   var x = document.getElementById("shashi");
  
@@ -23,8 +24,13 @@
   }
   // <h1 style={{color:"blue",textAlign:"center",fontSize:"4rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>
   // .JSON?key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM
+  
   function showPosition(position) {
-    x.innerHTML = "https://api.tomtom.com/search/2/reverseGeocode/"+(position.coords.latitude).toFixed(4)+","+(position.coords.longitude).toFixed(4)+"?JSON&key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM";
+    if(window.innerWidth >=1050){
+    x.innerHTML = "https://api.tomtom.com/search/2/reverseGeocode/"+((position.coords.latitude+0.0845)).toFixed(4)+","+((position.coords.longitude+0.6791).toFixed(4))+"?JSON&key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM";
+    } else {
+      x.innerHTML = "https://api.tomtom.com/search/2/reverseGeocode/"+(position.coords.latitude).toFixed(4)+","+((position.coords.longitude).toFixed(4))+"?JSON&key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM";
+    }
   }
   </script>
   <div id="root"></div>
