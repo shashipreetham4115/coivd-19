@@ -1,16 +1,11 @@
 import axios from "axios";
 import React , {useState, useEffect} from "react";
-
-import Title from "./Title";
-// import fetchLocApiData from "./api/"; 
+import Title from "./Title"; 
 import Cards from "./components/Cards/Cards";
 import styles from "./App.module.css";
 
 function App() {
- 
   const [state1, setstate1] = useState({s:"Loading..."}); 
-   
-
     useEffect(() => {
       const fetchData = async () => {
         var x = document.getElementById("shashi");
@@ -36,15 +31,8 @@ function App() {
     let cdata =  data1.data;
     setstate1({d,s,c,ddata,sdata,lastUpdate,cdata})
         };
-        setTimeout(() => {fetchData();}, 6000);
+        setTimeout(() => {fetchData();}, 7000);
     }, []);
-        // setTimeout(() => {
-        //   if((Ldata.s) !== undefined) {
-        //       this.setState({isActive:true});
-        //    }
-        // }, 6000);
-  
-  
     return (
       <div className={styles.container}>
       <Title />     
@@ -53,9 +41,6 @@ function App() {
        
     );
     }
- 
-
-
 
 export default App;
 
