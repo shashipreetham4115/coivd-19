@@ -1,46 +1,60 @@
-import React from "react";
-import Loader from 'react-loader-spinner';
+import axios from "axios";
+import React , {useState, useEffect} from "react";
 
 import Title from "./Title";
-import {fetchLocApiData} from "./api/"; 
+// import fetchLocApiData from "./api/"; 
 import Cards from "./components/Cards/Cards";
 import styles from "./App.module.css";
 
-class App extends React.Component {
-  state = {
-    ldata: {},
-    isActive:false
-    }
-  async componentDidMount() {
- const Ldata =await fetchLocApiData();
-this.setState({ldata:Ldata});
-        setTimeout(() => {
-          if((Ldata.s) !== undefined) {
-              this.setState({isActive:true});
-             
-           }  else {
-               window.location.reload(true);
-              }
-        }, 6000);
-  }
-  
-render() {
-         const {ldata} =this.state;
+function App() {
+ 
+  const [state1, setstate1] = useState({s:"Loading..."}); 
+   
 
+    useEffect(() => {
+      const fetchData = async () => {
+        var x = document.getElementById("shashi");
+        const data = await axios(
+          x.innerHTML.replace("amp;" , "")
+        );
+        const data1 = await axios(
+          `https://api.covidindiatracker.com/total.json`
+        );
+        const data2 = await axios(
+          `https://api.covid19india.org/v4/data.json`
+        );
+        const data3 = await axios(
+          `https://api.covid19india.org/state_district_wise.json`
+        );
+    let s =  data.data.addresses[0].address.countrySubdivision;
+    let d =  data.data.addresses[0].address.countrySecondarySubdivision;
+    let c =  data.data.addresses[0].address.country;
+    let ddata =  data3.data[s].districtData[d];
+    let sc =  data3.data[s].statecode;
+    let sdata =  data2.data[sc].total;
+    let lastUpdate =  data2.data[sc].meta.last_updated;
+    let cdata =  data1.data;
+        setstate1({d,s,c,ddata,sdata,lastUpdate,cdata})
+        };
+       fetchData();
+    }, []);
+        // setTimeout(() => {
+        //   if((Ldata.s) !== undefined) {
+        //       this.setState({isActive:true});
+        //    }
+        // }, 6000);
+  
+  
     return (
       <div className={styles.container}>
-      <Title/>     
-      {this.state.isActive ? <Cards data={ldata} />: <h1 style={{color:"blue",textAlign:"center",fontSize:"2.5rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>
-        }
-       </div>
+      <Title />     
+      <Cards data={state1} />
+      </div>
        
     );
-  
-      
-}
-
+    }
  
-}
+
 
 
 export default App;

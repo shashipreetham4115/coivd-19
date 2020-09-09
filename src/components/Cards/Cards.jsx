@@ -3,8 +3,10 @@ import { Card, CardContent, Grid } from "@material-ui/core";
 import styles from "./Cards.module.css";
 import Slider from 'infinite-react-carousel';
 import CardComponent from './Card/Card';
+import Loader from 'react-loader-spinner';
 
 const Cards = ({data}) => {
+    console.log(data)
     const settings ={
     arrows:false,
     dots:false,
@@ -12,7 +14,9 @@ const Cards = ({data}) => {
    
   }
  return (
-    
+   (data.s === "Loading...")? 
+     <h1 style={{color:"blue",textAlign:"center",fontSize:"2.5rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>
+    :
      <div>
      <div className={styles.container}>
      <Grid container spacing={0} justify="center">
