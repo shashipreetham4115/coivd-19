@@ -26,17 +26,17 @@ function App() {
         const data3 = await axios(
           `https://api.covid19india.org/state_district_wise.json`
         );
-    let s =  data.data.addresses[0].address.countrySubdivision;
-    let d =  data.data.addresses[0].address.countrySecondarySubdivision;
-    let c =  data.data.addresses[0].address.country;
+    let s = await data.data.addresses[0].address.countrySubdivision;
+    let d =await  data.data.addresses[0].address.countrySecondarySubdivision;
+    let c =await  data.data.addresses[0].address.country;
     let ddata =  data3.data[s].districtData[d];
     let sc =  data3.data[s].statecode;
     let sdata =  data2.data[sc].total;
     let lastUpdate =  data2.data[sc].meta.last_updated;
     let cdata =  data1.data;
-        setstate1({d,s,c,ddata,sdata,lastUpdate,cdata})
+    setstate1({d,s,c,ddata,sdata,lastUpdate,cdata})
         };
-       fetchData();
+        setTimeout(() => {fetchData();}, 6000);
     }, []);
         // setTimeout(() => {
         //   if((Ldata.s) !== undefined) {
