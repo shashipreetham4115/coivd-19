@@ -60,7 +60,7 @@ function App() {
          onclickfunction={f3}
          titleofBtn="TestCenters"
       />
-      { Show3 ? <Popup onclickfunction={f3} popupcontent={<TestCenters/>}></Popup>  : null}
+      { Show3 ? <Popup onclickfunction={f3} popupcontent={<Cards data={state1}/>}></Popup>  : null}
        <ButtonCard 
          onclickfunction={f4}
          titleofBtn="Helpline Numbers"
@@ -70,7 +70,7 @@ function App() {
          onclickfunction={f1}
          titleofBtn="Covid Symptoms Checker"
       />
-     { Show1 ? <Popup onclickfunction={f1} popupcontent={<Symptoms/>}></Popup>  : null}
+     { Show1 ? <Popup onclickfunction={f1} popupcontent={<Cards data={state1}/>}></Popup>  : null}
       </div>
        
     );
