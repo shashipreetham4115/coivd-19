@@ -14,7 +14,7 @@ const Cards = ({data}) => {
   }
  return (
    (data.s === "Loading...")? 
-     <h1 style={{color:"blue",textAlign:"center",fontSize:"2.5rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>
+     <h1 style={{color:"green",textAlign:"center",fontSize:"2.5rem"}}> Loading...!<Loader type="ThreeDots" color="green"  height="200" width="200"/></h1>
     :
      <div className={styles.overflow}>
      <div className={styles.container}>
