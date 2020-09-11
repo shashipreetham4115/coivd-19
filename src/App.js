@@ -3,7 +3,6 @@ import React , {useState, useEffect} from "react";
 import Title from "./Title"; 
 import Cards from "./components/Cards/Cards";
 import styles from "./App.module.css";
-import Symptoms from "./components/SymptomsChecker/Symptoms"
 import ButtonCard from "./ButtonCard";
 import Popup from "./Popup";
 import TestCenters from "./components/Cards/Testcenters"
@@ -60,7 +59,7 @@ function App() {
          onclickfunction={f3}
          titleofBtn="TestCenters"
       />
-      { Show3 ? <Popup onclickfunction={f3} popupcontent={<Cards data={state1}/>}></Popup>  : null}
+      { Show3 ? <Popup onclickfunction={f3} popupcontent={<TestCenters/>}></Popup>  : null}
        <ButtonCard 
          onclickfunction={f4}
          titleofBtn="Helpline Numbers"
