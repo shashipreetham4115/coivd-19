@@ -1,0 +1,56 @@
+.overflow {
+    overflow: auto;
+    margin: 13px;
+ }
+ @media all and (min-width: 500px) and (max-width: 1000px) {
+    .overflow {
+        overflow: auto;
+        margin: 13px;
+     }
+  }
+  @media screen and (max-width: 500px) {
+    .overflow {
+        overflow: auto;
+        margin: 13px;
+     }
+  }
+ /* @media screen and (max-height: 500px) {
+   .overflow {
+       height: 400px;
+    }
+ }
+ @media screen and (max-height: 600px) and (min-height: 500px){
+   .overflow {
+       height: 450px;
+    }
+ }
+ @media screen and (max-height: 700px) and (min-height: 600px) {
+   .overflow {
+       height: 550px;
+    }
+ }
+ @media screen and (max-height: 800px) and (min-height: 700px){
+   .overflow {
+       height: 650px;
+    }
+ }
+ @media screen and (max-height: 900px) and (min-height: 800px){
+   .overflow {
+       height: 750px;
+    }
+ }
+ @media screen and (max-height: 1000px) and (min-height: 900px){
+   .overflow {
+       height: 850px;
+    }
+ }
+ @media screen and (max-height: 1100px) and (min-height: 1000px){
+   .overflow {
+       height: 750px;
+    }
+ }
+ @media screen and (min-height: 1100px){
+   .overflow {
+       height: 950px;
+    }
+ } */

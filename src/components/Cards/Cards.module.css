@@ -9,7 +9,7 @@
 
 .main1 {
    border-radius: 10% !important;
-   width : 30%;
+   width : 50%;
    height: auto;
 }
 
@@ -17,7 +17,7 @@
     .main1 {
 
        border-radius: 10% !important;
-       width : 90%;
+       width : 100%;
        height: auto;
     }
    
@@ -26,10 +26,15 @@
     .main1 {
 
        border-radius: 10% !important;
-       width : 50%;
+       width : 80%;
        height: auto;
     }
    
+}
+.CardforTest{
+    border-radius: 10% !important;
+    width : auto;
+    height: auto;
 }
 
 .title {
@@ -86,8 +91,37 @@
     padding:5px !important;
     margin:0px !important;
     border:0px !important;
+    /* background-color: rgba(6, 206, 251, 0.687); */
+
 }
 .slider {
     width:100%;
     height:100%;
 }
+
+.overflow {
+    overflow: auto;
+    margin: 13px;
+    height: 450px;
+ }
+ @media all and (min-width: 500px) and (max-width: 1000px) {
+    .overflow {
+        overflow: auto;
+        margin: 13px;
+     }
+  }
+  @media screen and (max-width: 500px) {
+    .overflow {
+        overflow: auto;
+        margin: 0px;
+        width:100%;
+        height: 100%;
+        margin: 0px;
+        
+     }
+  }
+  .iframe {
+    height: 470px;
+    width: 290px;
+    border-radius: 20px;
+     }

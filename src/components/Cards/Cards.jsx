@@ -6,7 +6,6 @@ import CardComponent from './Card/Card';
 import Loader from 'react-loader-spinner';
 
 const Cards = ({data}) => {
-    console.log(data)
     const settings ={
     arrows:false,
     dots:false,
@@ -17,7 +16,7 @@ const Cards = ({data}) => {
    (data.s === "Loading...")? 
      <h1 style={{color:"blue",textAlign:"center",fontSize:"2.5rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>
     :
-     <div>
+     <div className={styles.overflow}>
      <div className={styles.container}>
      <Grid container spacing={0} justify="center">
          <Grid item component={Card} className={styles.main1}>
