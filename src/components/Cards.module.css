@@ -1,9 +1,10 @@
 .container {
-    margin: 50px 0px;
+    margin: 1%;
+    margin-top: 30% !important;
     text-align: center;
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
    
 } 
 
@@ -30,11 +31,6 @@
        height: auto;
     }
    
-}
-.CardforTest{
-    border-radius: 10% !important;
-    width : auto;
-    height: auto;
 }
 
 .title {
@@ -99,29 +95,32 @@
     height:100%;
 }
 
-.overflow {
-    overflow: auto;
-    margin: 13px;
-    height: 450px;
+/* .overflow {
+    overflow: scroll;
+    margin: 15px;
+    height:
  }
  @media all and (min-width: 500px) and (max-width: 1000px) {
     .overflow {
-        overflow: auto;
+        overflow: scroll;
         margin: 13px;
      }
   }
   @media screen and (max-width: 500px) {
     .overflow {
-        overflow: auto;
-        margin: 0px;
-        width:100%;
-        height: 100%;
-        margin: 0px;
-        
+        overflow: scroll;
      }
-  }
+  } */
   .iframe {
     height: 470px;
     width: 290px;
     border-radius: 20px;
+    margin-top: 10%;
+    border: 0px;
+
+     }
+
+     .selfcard{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
      }

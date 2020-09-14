@@ -5,7 +5,7 @@
     font-size: 340%;
     text-align: center;
     text-shadow: 2px 2px rgb(255, 0, 0);
-    margin-bottom: 70px;
+    /* margin-bottom: 70px; */
 }
 .imgs{
     border-radius: 100%;
@@ -15,11 +15,10 @@
 @media screen and (max-width: 721px) {
     .title {
         font-family: 'Abril Fatface', serif;
-        color: rgb(1, 17, 17);
+        color: rgb(255, 255, 255);
         font-size: 260%;
         text-align: center;
-        text-shadow: 1.3px 1.15px rgb(221, 22, 22);
-        margin-top: 50px;
+        text-shadow: 1.3px 1.15px rgb(0, 0, 0);
         
     }
     .imgs{
@@ -29,28 +28,35 @@
     }
 }
 .main {
-    border-radius: 25% !important;
+    border-radius: 50% !important;
     cursor: pointer;
  }
 
  .main1{
      background-color: rgba(19, 11, 243, 0.218);
  }
+ 
  .title1 {
     font-family: 'Abril Fatface', sans-serif;
     color: rgba(7, 15, 1, 0.946);
     font-size: 100%;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
     text-decoration: none;
     border: none;
     outline:none;
-    /* cursor: pointer; */
-    background-color: rgba(19, 11, 243, 0);
+    margin-bottom: -15px;
+    margin-top: 7px;
 }
-.king{
-margin: 40px;
-
+.title2 {
+    font-family: 'Abril Fatface', sans-serif;
+    color: rgba(7, 15, 1, 0.49);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    outline:none;
+    margin-bottom: 7px;
 }
 .popup {  
     position: fixed;  
@@ -61,26 +67,35 @@ margin: 40px;
     right: 0;  
     bottom: 0;  
     margin: auto; 
-    background-color: rgba(0,0,0, 0.5);  
+    background-color: rgba(0,0,0, 0.5);
   }  
   .popup_inner {  
     position: absolute;  
     left: 25%;  
     right: 25%;  
-    top: 5%;  
-    bottom: 15%;
+    top: 2%;  
+    bottom: 8%;
     margin-top: 70px;    
     border-radius: 20px;  
-    background: white; 
-     
+    background: white;
+    animation: fadeIn 3s;
+  }
+
+  @keyframes fadeIn {
+      from{
+          opacity: 0;
+      }
+      to{
+          opacity: 1;
+      }
   }
   @media all and (min-width: 500px) and (max-width: 1000px) {
     .popup_inner {  
         position: absolute;  
         left: 15%;  
         right: 15%;  
-        top: 1%;  
-        bottom: 10%;
+        top: 2%;  
+        bottom: 19%;
         margin-top: 70px;    
         border-radius: 20px;  
         background: white; 
@@ -94,7 +109,7 @@ margin: 40px;
         right: 2%;  
         top: 2%;  
         bottom: 2%; 
-        margin-top: 0px;   
+        margin-top: 10px;   
         border-radius: 20px;  
         background: white;  
       }
@@ -105,5 +120,38 @@ margin: 40px;
      
    }
    
-       
-      
+   .home {
+       text-decoration: none !important;
+       border: none !important;
+       outline:none !important;
+   }
+   .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:8%;
+    background-color: rgb(155, 233, 45);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+ .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:9%;
+    background-color: rgb(149, 255, 0);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+ .footerdiv img{
+    width: 50%;
+ }
+ 
