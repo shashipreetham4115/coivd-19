@@ -8,6 +8,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const Cards = ({data}) => {
+    console.log(data);
 const settings = {
     arrows: false,
     dots: false,

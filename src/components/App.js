@@ -39,7 +39,7 @@ function App() {
       let sc = data3.data[s].statecode;
       let sdata = data2.data[sc].total;
       let lastUpdate = data2.data[sc].meta.last_updated;
-      let cdata = data1.data.data;
+      let cdata = data1.data;
       let tldata1 = data4.data.data.medicalColleges;
       let hndata = data5.data.data.contacts.regional;
       let count = 0;
