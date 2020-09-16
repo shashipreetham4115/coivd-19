@@ -24,16 +24,16 @@ return (
         descriptionoftitle="TestCenter near your location"
         />
       <ButtonCard
-      link={"/stats"}
+      link={"/symptomschecker"}
         titleofBtn="Symptoms Checker"
         descriptionoftitle="Checks for Covid-19 symptoms"
         iconfortitle="https://img.icons8.com/nolan/35/checked-2.png"
        />
       <ButtonCard
-      link={"/stats"}
+      link={"/helplinenumbers"}
         titleofBtn="Helpline Numbers"
         descriptionoftitle="National and state Helpline numbers"
-        iconfortitle="https://img.icons8.com/nolan/35/phone-disconnected.png"
+        iconfortitle="https://img.icons8.com/nolan/35/phone.png"
       />
     
       <ButtonCard

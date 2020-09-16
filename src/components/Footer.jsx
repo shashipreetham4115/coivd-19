@@ -33,7 +33,7 @@ return (
            </NavLink>
            <NavLink to={"/helplinenumbers"} className={styles.home}>
            <div className={styles.footerdiv}>
-           <img style={{margin:"0px 5px -1px 5px"}} src="https://img.icons8.com/nolan/100/phone-disconnected.png" alt="icon" />
+           <img style={{margin:"0px 5px -1px 5px"}} src="https://img.icons8.com/nolan/100/phone.png" alt="icon" />
            </div>
            </NavLink>
 

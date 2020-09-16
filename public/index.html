@@ -8,33 +8,32 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Corona Virus Tracker" />
   <title>Covid19TrackerbyLoation</title>
-  </head>
+  
+</head>
 
 <body>
   <p id="shashi" style="display: none;"></p>
   <script>
     getLocation();
-  var x = document.getElementById("shashi");
- 
-  function getLocation() {
-    if (navigator.geolocation) {
-      window.navigator.geolocation.getCurrentPosition(showPosition);
-    } 
-  }
-  // <h1 style={{color:"blue",textAlign:"center",fontSize:"4rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>
-  // .JSON?key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM
-  
-  function showPosition(position) {
-    // if(window.innerWidth >=1050){
-    // x.innerHTML = "https://api.tomtom.com/search/2/reverseGeocode/"+((position.coords.latitude+0.0845)).toFixed(4)+","+((position.coords.longitude+0.6791).toFixed(4))+"?JSON&key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM";
-    // } else {
-      x.innerHTML = "https://api.tomtom.com/search/2/reverseGeocode/"+(position.coords.latitude).toFixed(4)+","+((position.coords.longitude).toFixed(4))+"?JSON&key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM";
-    
-  }
- 
+    var x = document.getElementById("shashi");
+    function getLocation() {
+      if (navigator.geolocation) {
+        window.navigator.geolocation.getCurrentPosition(showPosition);
+      }
+    }
+    // <h1 style={{color:"blue",textAlign:"center",fontSize:"4rem"}}> Loading...!<Loader type="ThreeDots" color="blue"  height="200" width="200"/></h1>
+    // .JSON?key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM
+
+    function showPosition(position) {
+      // if(window.innerWidth >=1050){
+      // x.innerHTML = "https://api.tomtom.com/search/2/reverseGeocode/"+((position.coords.latitude+0.0845)).toFixed(4)+","+((position.coords.longitude+0.6791).toFixed(4))+"?JSON&key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM";
+      // } else {
+      x.innerHTML = "https://api.tomtom.com/search/2/reverseGeocode/" + (position.coords.latitude).toFixed(4) + "," + ((position.coords.longitude).toFixed(4)) + "?JSON&key=OUC1rbvwAxeG6ozt86Vc6zzKarjiAzNM";
+
+    }
+
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
   <div id="root"></div>
 </body>
 

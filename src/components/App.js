@@ -42,15 +42,20 @@ function App() {
       let cdata = data1.data;
       let tldata1 = data4.data.data.medicalColleges;
       let hndata = data5.data.data.contacts.regional;
-      let count = 0;
       let tldata = [];
-      for (var i = 0; i <= tldata1.length - 1; i++) {
-        if (s === tldata1[i].state) {
-          tldata.push(tldata1[i]);
+      let count = 0;
+      for (var i = 0; i <= tldata1.length - 2; i++) {
+        const j=i+1;
+        if (tldata1[i].state === tldata1[j].state) {
+          continue;
+        }
+        else{
+          tldata.push(tldata1[i].state);
           count++;
         }
       }
-      setstate1({ d, s, c, ddata, sdata, lastUpdate, cdata, tldata1, count, tldata,hndata });
+      tldata.push(tldata1[tldata1.length-1].state);
+      setstate1({ d, s, c, ddata, sdata, lastUpdate, cdata,count, tldata1, tldata,hndata });
     };
     setTimeout(() => {
       fetchData()

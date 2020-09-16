@@ -124,3 +124,67 @@
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
      }
+     .searching{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin-bottom: 10px; 
+        width: auto;
+         height: 38px;
+        margin-top: 25%;
+         margin-bottom: 5%;
+        display: flex;
+        align-items: center;
+    }
+     .searchimg{
+        position: absolute;
+        padding: 9px 10px 10px ; 
+        min-width: 30px;  
+     }
+     .search{
+         width:90%;
+         height: 10px;
+        border: 0px;
+        padding: 10px 0px 10px 50px; 
+        outline: none;
+     }
+     
+     .search:focus{
+        border: 0px;
+        outline: none;
+    }
+     .search:hover::placeholder{
+         opacity: 0;
+     }
+     .search:not(:focus)::placeholder{
+        opacity: 1;
+    }
+     
+     /* .searchimg{
+          
+           height: 35px;
+           left: 0;
+     }
+     .searching{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     } */
+     .home {
+        text-decoration: none !important;
+    }
+    .button{
+        background-color: rgb(215, 53, 243);
+        border: 0px;
+        border-radius: 20px;
+        width: 25%;
+        height: 30px;
+        color: rgba(22, 22, 22, 0.456);
+        margin: 10px;
+    }
+     
+    .selfcard a img {
+        border: 2px solid rgba(17, 223, 17, 0.816);
+        margin-top: 20px;
+        border-radius: 10px;    
+        background-color: rgb(0, 255, 0);
+    }
