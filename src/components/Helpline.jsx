@@ -51,7 +51,7 @@ const TestCenters = ({ data }) => {
                                     <div className={styles.selfcard}>
                                         <br />
                                         <h5 style={{ margin: 0, color: " rgba(0, 0, 0, 0.744)" }}>{State1}</h5>
-                                        <a href={"tel:"+{State2}+""} ><img alt="icon" src="https://img.icons8.com/nolan/34/phone.png"/></a>
+                                        <a href={"tel:"+{State1}+""} ><img alt="icon" src="https://img.icons8.com/nolan/34/phone.png"/></a>
                                         <br />
                                     </div>
                         </div>
