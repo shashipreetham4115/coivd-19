@@ -15,7 +15,7 @@ return (
         titleofBtn="Stats"
         link={"/stats"}
         descriptionoftitle="COVID-19 stats by your location"
-        iconfortitle="https://img.icons8.com/nolan/35/group-of-projects.png"
+        iconfortitle="https://img.icons8.com/nolan/35/combo-chart.png"
         />
       <ButtonCard
       link={"/testcenters"}
@@ -24,10 +24,10 @@ return (
         descriptionoftitle="TestCenter near your location"
         />
       <ButtonCard
-      link={"/symptomschecker"}
-        titleofBtn="Symptoms Checker"
-        descriptionoftitle="Checks for Covid-19 symptoms"
-        iconfortitle="https://img.icons8.com/nolan/35/checked-2.png"
+      link={"/charts"}
+        titleofBtn="Pie Charts"
+        descriptionoftitle="Pie Charts for Indian Covid Stats"
+        iconfortitle="https://img.icons8.com/nolan/35/pie-chart.png"
        />
       <ButtonCard
       link={"/helplinenumbers"}

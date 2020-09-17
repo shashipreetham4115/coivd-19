@@ -16,7 +16,7 @@ return (
 
            <NavLink to={"/stats"} className={styles.home}>
            <div className={styles.footerdiv}>
-           <img style={{margin:"0px 5px -1px 5px"}} src="https://img.icons8.com/nolan/100/group-of-projects.png" alt="icon" />     
+           <img style={{margin:"0px 5px -1px 5px"}} src="https://img.icons8.com/nolan/100/combo-chart" alt="icon" />     
            </div>
            </NavLink>
 
@@ -26,9 +26,9 @@ return (
            </div>
            </NavLink>
 
-           <NavLink to={"/symptomschecker"} className={styles.home}>
+           <NavLink to={"/charts"} className={styles.home}>
            <div className={styles.footerdiv}>
-           <img style={{margin:"0px 5px -1px 5px"}} src="https://img.icons8.com/nolan/100/checked-2.png" alt="icon" />
+           <img style={{margin:"0px 5px -1px 5px"}} src="https://img.icons8.com/nolan/100/pie-chart.png" alt="icon" />
            </div>
            </NavLink>
            <NavLink to={"/helplinenumbers"} className={styles.home}>

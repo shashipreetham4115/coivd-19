@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent, Grid } from "@material-ui/core";
 import styles from "./Cards.module.css";
 import Slider from 'infinite-react-carousel';
-import CardComponent from './Card/Card';
+import CardComponent from '../Card/Card';
 import Loader from 'react-loader-spinner';
 import Header from "./Header";
 import Footer from "./Footer";
@@ -35,37 +35,37 @@ return (
                                     contentHead={styles.content}
                                     contentBody={styles.infected}
                                     cardTitle="Infected"
-                                    cData={data.cdata.confirmed}
+                                    cData={data.pieData.total.confirmed}
                                     sData={data.sdata.confirmed}
                                     dData={data.ddata.confirmed}
                                     country={data.c}
                                     state={data.s}
                                     district={data.d}
-                                    lastUpdate={data.lastUpdate}
+                                    lastUpdate={data.pieData.lastRefreshed}
                                 />
                                 <CardComponent
                                     contentHead={styles.content1}
                                     contentBody={styles.recovered}
                                     cardTitle="Recovered"
-                                    cData={data.cdata.recovered}
+                                    cData={data.pieData.total.recovered}
                                     dData={data.ddata.recovered}
                                     sData={data.sdata.recovered}
                                     country={data.c}
                                     state={data.s}
                                     district={data.d}
-                                    lastUpdate={data.lastUpdate}
+                                    lastUpdate={data.pieData.lastRefreshed}
                                 />
                                 <CardComponent
                                     contentHead={styles.content2}
                                     contentBody={styles.deaths}
                                     cardTitle="Deaths"
-                                    cData={data.cdata.deaths}
+                                    cData={data.pieData.total.deaths}
                                     sData={data.sdata.deceased}
                                     dData={data.ddata.deceased}
                                     country={data.c}
                                     state={data.s}
                                     district={data.d}
-                                    lastUpdate={data.lastUpdate}
+                                    lastUpdate={data.pieData.lastRefreshed}
                                 />
 
                             </Slider>

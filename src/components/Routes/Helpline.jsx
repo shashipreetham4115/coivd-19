@@ -3,13 +3,11 @@ import styles from "./Cards.module.css";
 import Loader from 'react-loader-spinner';
 import Header from "./Header";
 import Footer from "./Footer";
-import AnimatedInput from "./AnimatedInput";
+import AnimatedInput from "./AnimatedInput1";
 
 const TestCenters = ({ data }) => {
     const [State1, setState1] = useState({ s: "Loading..." });
     const [State2, setState2] = useState({ search: "" });
-    console.log(State2);
-    // const [State3, setState3] = useState();
     return (
         <div style={{ textAlign: "center", marginTop: "18%", marginBottom: "17%" }}>
             <Header />
@@ -21,25 +19,19 @@ const TestCenters = ({ data }) => {
                         <div>
                             <div className={styles.searching}>
                                 <img src="https://img.icons8.com/nolan/25/google-web-search.png" className={styles.searchimg} alt="icon" />
-                                <AnimatedInput type="text" className={styles.search} onChange={event => setState2({ search: event.target.value })} placeholder={data.tldata} />
+                                <AnimatedInput type="text" className={styles.search} onChange={event => setState2({ search: event.target.value })} placeholder={data.hndata} />
                             </div>
-                            {(data.tldata.filter((tldata) => { return tldata.toLowerCase().indexOf((State2.search).toLowerCase()) !== -1; })).map((tldata, index) => {
+                            {(data.hndata.filter((tldata) => { return tldata.loc.toLowerCase().indexOf((State2.search).toLowerCase()) !== -1; })).map((tldata, index) => {
                                 return (
 
                                     <div className={styles.selfcard} key={index} onClick={
                                         () => {
-                                            const testdata = [];
-                                            for (var i = 0; i <= data.tldata1.length - 1; i++) {
-                                                if (tldata === data.tldata1[i].state) {
-                                                    testdata.push(data.tldata1[i].name);
-                                                }
-                                            }
-                                            setState1(testdata);
+                                            setState1(tldata.number);
                                             setState2({search:""});
                                         }
                                     }>
                                         <br />
-                                        <h5 style={{ margin: 0, color: " rgba(0, 0, 0, 0.744)", fontSize: "100%" }}>{tldata}</h5>
+                                        <h5 style={{ margin: 0, color: " rgba(0, 0, 0, 0.744)", fontSize: "100%" }}>{tldata.loc}</h5>
                                         <br />
                                     </div>
 
@@ -49,21 +41,17 @@ const TestCenters = ({ data }) => {
 
                         </div>
                         : <div>
-                            <button className={styles.button} onClick={
+                                 <button className={styles.button} onClick={
                                 () => {
                                     setState1({ s: "Loading..." })
                                 }
                             }>Back</button>
-                            {State1.map((tldata, index) => {
-                                return (
-                                    <div className={styles.selfcard} key={index}>
+                                    <div className={styles.selfcard}>
                                         <br />
-                                        <h5 key={index} style={{ margin: 0, color: " rgba(0, 0, 0, 0.744)" }}>{tldata}</h5>
+                                        <h5 style={{ margin: 0, color: " rgba(0, 0, 0, 0.744)" }}>{State1}</h5>
+                                        <a href={"tel:"+State1+""} ><img alt="icon" src="https://img.icons8.com/nolan/34/phone.png"/></a>
                                         <br />
                                     </div>
-                                )
-                            })
-                            }
                         </div>
                     }
                 </div>
